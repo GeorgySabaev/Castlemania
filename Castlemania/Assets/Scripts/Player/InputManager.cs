@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     public static InputManager instance;
     public PlayerInput input;
     // Start is called before the first frame update
-    void Awake()
+    public void Awake()
     {
         if (instance){
             Destroy(this);
