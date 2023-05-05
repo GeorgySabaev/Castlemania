@@ -47,13 +47,14 @@ public class CharacterMovement : MonoBehaviour
     public void Move(Vector2 direction)
     {
         transform.Translate(direction);
+        transform.position = graph.tilemap.CellToWorld(graph.GetCoordinates(transform.position)); // snap to grid
         if (direction.x > 0)
         {
-            anim.SetBool("flipped", false);
+            anim?.SetBool("flipped", false);
         }
         else if (direction.x < 0)
         {
-            anim.SetBool("flipped", true);
+            anim?.SetBool("flipped", true);
         }
     }
 }

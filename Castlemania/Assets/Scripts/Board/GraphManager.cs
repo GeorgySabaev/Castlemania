@@ -34,7 +34,9 @@ public class GraphManager : MonoBehaviour
 
     public bool ConnectedDown(Vector3Int position)
     {
-        return tilemap.GetInstantiatedObject(position).GetComponent<GraphTileConnections>().down;
+        var tmp = tilemap.GetInstantiatedObject(position);
+        if (!tmp) Debug.Log(position);
+        return tmp.GetComponent<GraphTileConnections>().down;
     }
 
     public Vector3Int GetCoordinates(Vector3 position)
