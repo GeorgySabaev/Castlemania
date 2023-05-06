@@ -28,6 +28,10 @@ public class GraphPathfinder : MonoBehaviour
         used.Add(location);
         foreach (Vector3Int neighbour in GetAdjacentTiles(location))
         {
+            if (targets.Contains(neighbour))
+            {
+                return new Vector2Int(neighbour.x - location.x, neighbour.y - location.y);
+            }
             queue.Enqueue(new KeyValuePair<Vector3Int, Vector3Int>(neighbour, neighbour));
             used.Add(neighbour);
         }
@@ -37,7 +41,8 @@ public class GraphPathfinder : MonoBehaviour
             var curr = queue.Dequeue();
             foreach (var next in GetAdjacentTiles(curr.Value))
             {
-                if(used.Contains(next)){
+                if (used.Contains(next))
+                {
                     continue;
                 }
                 if (targets.Contains(next))
