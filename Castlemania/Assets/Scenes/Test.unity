@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 126633776}
   - component: {fileID: 126633777}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731216470}
   - component: {fileID: 731216471}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ComboTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3041,7 +3041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860507365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Function
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3327,8 +3327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 60
   offset: 0
-  preHitWindowPart: 0.15
-  postHitWindowPart: 0.04
+  preHitWindowPart: 0.1
+  postHitWindowPart: 0.05
   BeatFires:
     m_PersistentCalls:
       m_Calls:
@@ -3505,7 +3505,7 @@ GameObject:
   - component: {fileID: 1010186920}
   - component: {fileID: 1010186922}
   - component: {fileID: 1010186923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BasicAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3646,7 +3646,7 @@ GameObject:
   - component: {fileID: 1321557982}
   - component: {fileID: 1321557984}
   - component: {fileID: 1321557983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3724,7 +3724,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.5, y: 0.5}
@@ -3917,7 +3917,7 @@ GameObject:
   - component: {fileID: 1505218555}
   - component: {fileID: 1505218554}
   - component: {fileID: 1505218553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4069,7 +4069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1561629922}
   - component: {fileID: 1561629923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4151,7 +4151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1569008705}
   - component: {fileID: 1569008704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4277,7 +4277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702126949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4445,7 +4445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973981214}
   - component: {fileID: 1973981213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
