@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6056942711181143537}
   - component: {fileID: 1011162554167663709}
   - component: {fileID: 8793129308771709544}
+  - component: {fileID: 6811492234431776809}
   - component: {fileID: 1353652604}
   m_Layer: 6
   m_Name: FireEnemy
@@ -117,6 +118,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1353652604}
+--- !u!114 &6811492234431776809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3970655304076129249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ea2267fa7f97642bffaf9cbf3fbff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6056942711181143537}
+        m_TargetAssemblyTypeName: A_ChaseTarget, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &1353652604
 Animator:
   serializedVersion: 3

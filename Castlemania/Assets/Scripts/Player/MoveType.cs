@@ -9,4 +9,5 @@ public enum MoveType
     moveDown,
     moveLeft,
     moveRight,
+    idle,
 }

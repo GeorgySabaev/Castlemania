@@ -9,9 +9,12 @@ public class Clock : MonoBehaviour
 
     public float offset;
 
-    public float hitWindowPart;
+    public float preHitWindowPart;
+    public float postHitWindowPart;
 
     public UnityEvent BeatFires;
+    public UnityEvent BeatResolves;
+    public UnityEvent PostBeatResolves;
 
     [Space(10)]
     public bool canHit;
@@ -24,7 +27,8 @@ public class Clock : MonoBehaviour
 
     public double rate;
 
-    public double hitWindow;
+    public double preHitWindow;
+    public double postHitWindow;
 
     public int state = 2;
 
@@ -34,7 +38,8 @@ public class Clock : MonoBehaviour
         instance = this;
         rate = 60.0 / bpm;
         beatNumber = 0;
-        hitWindow = rate * hitWindowPart;
+        preHitWindow = rate * preHitWindowPart;
+        postHitWindow = rate * postHitWindowPart;
         targetTime = AudioSettings.dspTime+rate*offset;
     }
     void OnAudioFilterRead(float[] data, int channels)
@@ -44,18 +49,20 @@ public class Clock : MonoBehaviour
             switch (state)
             {
                 case 0:
+                    Invoker.Invoke(BeatResolves);
+                    Invoker.Invoke(PostBeatResolves);
                     canHit = false;
-                    targetTime += rate - 2 * hitWindow;
+                    targetTime += rate - preHitWindow - postHitWindow;
                     state = 1;
                     return;
                 case 1:
                     canHit = true;
-                    targetTime += hitWindow;
+                    targetTime += preHitWindow;
                     state = 2;
                     return;
                 case 2:
                     Invoker.Invoke(BeatFires);
-                    targetTime += hitWindow;
+                    targetTime += postHitWindow;
                     state = 0;
                     return;
             }

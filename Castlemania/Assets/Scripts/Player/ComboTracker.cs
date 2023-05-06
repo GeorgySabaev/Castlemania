@@ -46,6 +46,7 @@ public class ComboTracker : MonoBehaviour, ISerializationCallbackReceiver
     public List<MoveToEventPair> _actions = new List<MoveToEventPair>();
     public Dictionary<int, UnityEvent> Actions = new Dictionary<int, UnityEvent>();
     public int maxComboLength;
+    public bool enteredCommand;
     public LinkedList<MoveType> actionLog = new LinkedList<MoveType>();
 
     public void OnBeforeSerialize() {}
@@ -61,17 +62,28 @@ public class ComboTracker : MonoBehaviour, ISerializationCallbackReceiver
             _actions[i].Moves.list.Reverse();
         }
     }
+    public void Start(){
+       Clock.instance.BeatResolves.AddListener(ResolveMove);
+    }
 
     public void MakeMove(MoveType type)
     {
+        if(enteredCommand){
+            return;
+        }
+        enteredCommand = true;
         actionLog.AddFirst(type);
         if (actionLog.Count > maxComboLength){
             actionLog.RemoveLast();
         }
-        ResolveMove();
     }
 
     public void ResolveMove() {
+        Debug.Log(1);
+        if(!enteredCommand){
+            MakeMove(MoveType.idle);
+        }
+        enteredCommand = false;
         var tmp = new MoveTypeList();
         UnityEvent action = new UnityEvent();
         foreach (var move in actionLog){

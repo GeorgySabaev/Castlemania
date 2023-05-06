@@ -176,10 +176,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1011162554167663709, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
-      propertyPath: targets.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011162554167663709, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 1321557980}
@@ -193,11 +189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3970655304076129251, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8806434
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3970655304076129251, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.063630104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3970655304076129251, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -388,17 +384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 339048844}
---- !u!114 &350102117 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6056942711181143537, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
-  m_PrefabInstance: {fileID: 423473171}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7ffec65af01ff4a8083ae09f67522c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &423473171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,11 +409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3970655304076129251, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.8845606
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3970655304076129251, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0694623
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3970655304076129251, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -666,6 +651,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   maxComboLength: 3
+  enteredCommand: 0
 --- !u!1 &796058889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,7 +3327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 60
   offset: 0
-  hitWindowPart: 0.15
+  preHitWindowPart: 0.15
+  postHitWindowPart: 0.04
   BeatFires:
     m_PersistentCalls:
       m_Calls:
@@ -3369,59 +3356,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1353652603}
-        m_TargetAssemblyTypeName: A_ChaseTarget, Assembly-CSharp
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1215544806}
-        m_TargetAssemblyTypeName: A_ChaseTarget, Assembly-CSharp
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1198902773}
-        m_TargetAssemblyTypeName: A_ChaseTarget, Assembly-CSharp
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 350102117}
-        m_TargetAssemblyTypeName: A_ChaseTarget, Assembly-CSharp
-        m_MethodName: Invoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  BeatResolves:
+    m_PersistentCalls:
+      m_Calls: []
+  PostBeatResolves:
+    m_PersistentCalls:
+      m_Calls: []
   canHit: 0
   targetTime: 0
   beatNumber: 0
   rate: 0
-  hitWindow: 0
+  preHitWindow: 0
+  postHitWindow: 0
   state: 2
 --- !u!4 &945381306
 Transform:
@@ -3687,28 +3633,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &1198902773 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6056942711181143537, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
-  m_PrefabInstance: {fileID: 909319466}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7ffec65af01ff4a8083ae09f67522c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1215544806 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6056942711181143537, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
-  m_PrefabInstance: {fileID: 227252890}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7ffec65af01ff4a8083ae09f67522c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1321557979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,17 +3700,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1353652603 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6056942711181143537, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
-  m_PrefabInstance: {fileID: 3970655305407490708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7ffec65af01ff4a8083ae09f67522c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1391856330
 GameObject:
   m_ObjectHideFlags: 0
