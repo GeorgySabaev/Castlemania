@@ -35,7 +35,6 @@ public class GraphManager : MonoBehaviour
     public bool ConnectedDown(Vector3Int position)
     {
         var tmp = tilemap.GetInstantiatedObject(position);
-        if (!tmp) Debug.Log(position);
         return tmp.GetComponent<GraphTileConnections>().down;
     }
 

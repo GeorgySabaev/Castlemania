@@ -16,6 +16,7 @@ public class GraphPathfinder : MonoBehaviour
     public Vector2Int Pathfind(Vector3Int location)
     // modified BFS
     {
+        TargetCleanup();
         // setup
         HashSet<Vector3Int> used = new HashSet<Vector3Int>();
         Queue<KeyValuePair<Vector3Int, Vector3Int>> queue =
@@ -55,6 +56,10 @@ public class GraphPathfinder : MonoBehaviour
         }
         Debug.LogWarning($"Target not found by {gameObject.name}'s GraphPathfinder!");
         return new Vector2Int(0, 0);
+    }
+    private void TargetCleanup()
+    {
+        targets = new List<Transform>(targets.Where((X) => X));
     }
 
     private HashSet<Vector3Int> GetTargetPositions()

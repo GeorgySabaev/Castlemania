@@ -10,4 +10,8 @@ public class EnemyTurnSubscriber : MonoBehaviour
     {
         Clock.instance.PostBeatResolves.AddListener(action.Invoke);
     }
+    public void OnDestroy(){
+        Clock.instance.PostBeatResolves.RemoveListener(action.Invoke);
+    }
+
 }
