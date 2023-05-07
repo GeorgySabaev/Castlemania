@@ -176,6 +176,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1011162554167663709, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
+      propertyPath: targets.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011162554167663709, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 1321557980}
@@ -662,25 +666,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Moves:
-      list: 07000000
-    Event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1991721510}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   maxComboLength: 3
   enteredCommand: 0
+  fail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1991721510}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &796058889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +3104,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1011162554167663709, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: targets.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1011162554167663709, guid: c55717e4d03b29a43b60df4b1441725c, type: 3}
       propertyPath: targets.Array.data[0]
@@ -4801,7 +4803,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9e66646d25e75ba47bbb2b016b6a792d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
