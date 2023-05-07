@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class A_PlaySound : MonoBehaviour, IAction
+public class A_PlaySound : BaseAction
 {
     new public AudioSource audio;
 
-    public void Invoke()
+    override public void Invoke()
     {
         audio.Play();
     }

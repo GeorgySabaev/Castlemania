@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class A_MeleeAttack : MonoBehaviour, IAction
+public class A_MeleeAttack : BaseAction
 {
     public Collider2D trigger;
     public LayerMask layerMask;
 
-    public void Invoke()
+    override public void Invoke()
     {
         var collisions = Physics2D.OverlapBoxAll(
             trigger.bounds.center,

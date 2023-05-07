@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class A_ChaseTarget : MonoBehaviour, IAction
+public class A_ChaseTarget : BaseAction
 {
     public GraphPathfinder pathfinder;
     public CharacterMovement movementScript;
@@ -11,7 +11,7 @@ public class A_ChaseTarget : MonoBehaviour, IAction
     public void Start(){
         graph = GraphManager.instance;
     }
-    public void Invoke(){
+    override public void Invoke(){
         var desiredMovement = pathfinder.Pathfind(graph.GetCoordinates(transform.position));
         movementScript.Move(desiredMovement);
     }

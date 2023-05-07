@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class A_PlayAnimation : MonoBehaviour, IAction
+public class A_PlayAnimation : BaseAction
 {
     public Animator animator;
     public string state;
     
-    public void Invoke(){
+    override public void Invoke(){
         animator.Play(state);
     }
 }

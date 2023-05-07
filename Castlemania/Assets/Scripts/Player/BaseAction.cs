@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IAction
+public abstract class BaseAction : MonoBehaviour
 {
-    public void Invoke();
+    public abstract void Invoke();
 }
