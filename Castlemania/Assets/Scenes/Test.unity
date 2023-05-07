@@ -208,6 +208,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153094771}
+  - component: {fileID: 153094773}
+  - component: {fileID: 153094772}
+  - component: {fileID: 153094776}
+  - component: {fileID: 153094775}
+  - component: {fileID: 153094774}
   m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
@@ -222,7 +227,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153094770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.00000031292436, w: 1}
   m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -231,6 +236,94 @@ Transform:
   m_Father: {fileID: 808181572}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &153094772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153094770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ea2267fa7f97642bffaf9cbf3fbff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 153094774}
+        m_TargetAssemblyTypeName: SniperController, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &153094773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153094770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce33c9ebb94aca46a0bb1bcd0d2fea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: player
+--- !u!114 &153094774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153094770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c9762e139ec824788efdf4fcd534ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aim: {fileID: 153094773}
+  aimRepeats: 5
+  flash: {fileID: 153094775}
+  flashRepeats: 3
+  shoot: {fileID: 153094776}
+  shootRepeats: 1
+  target: player
+  counter: 0
+  state: 0
+--- !u!114 &153094775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153094770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2396f4f64728141825197dd5564b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &153094776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153094770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cab8e68175fb34a90df82a798e0a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1001 &227252890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -904,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &808181569
 Rigidbody2D:
   serializedVersion: 4
@@ -973,7 +1066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808181568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: -5, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 33535410}
@@ -3466,7 +3559,7 @@ Camera:
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 1
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -4602,13 +4695,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689417491}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: -10}
   m_Children: []
   m_Father: {fileID: 153094771}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1689417493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5153,8 +5246,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 500
   m_Positions:
-  - {x: -0.075, y: 0, z: 0}
-  - {x: -10, y: 0, z: 0}
+  - {x: 0, y: 0.075, z: 0}
+  - {x: 0, y: 10, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1.01
@@ -5176,7 +5269,7 @@ LineRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.97647065, g: 0.34117648, b: 0.16470589, a: 0.78431374}
-      key1: {r: 1, g: 0.7058824, b: 0.36862746, a: 0.39215687}
+      key1: {r: 1, g: 0.7058824, b: 0.36862746, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5192,7 +5285,7 @@ LineRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 193
-      atime1: 65535
+      atime1: 65342
       atime2: 0
       atime3: 0
       atime4: 0
