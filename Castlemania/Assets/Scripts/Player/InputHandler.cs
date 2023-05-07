@@ -29,8 +29,8 @@ public class InputHandler : MonoBehaviour
         if (Clock.instance.canHit)
         {
             invokes.Invoke(moveType);
-        }else{
-            invokes.Invoke(MoveType.idle);
+        }else if (Clock.instance.canFail){
+            invokes.Invoke(MoveType.fail);
         }
     }
 }

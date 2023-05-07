@@ -10,4 +10,5 @@ public enum MoveType
     moveLeft,
     moveRight,
     idle,
+    fail,
 }
