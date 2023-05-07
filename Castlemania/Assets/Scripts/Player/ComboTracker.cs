@@ -48,6 +48,7 @@ public class ComboTracker : MonoBehaviour, ISerializationCallbackReceiver
     public int maxComboLength;
     public bool enteredCommand;
     public LinkedList<MoveType> actionLog = new LinkedList<MoveType>();
+    public UnityEvent fail = new UnityEvent();
 
     public void OnBeforeSerialize() {}
 
@@ -71,6 +72,12 @@ public class ComboTracker : MonoBehaviour, ISerializationCallbackReceiver
 
     public void MakeMove(MoveType type)
     {
+        if(type == MoveType.fail){
+            fail.Invoke();
+            if(!Clock.instance.canFail){
+                return;
+            }
+        }
         if(enteredCommand){
             return;
         }

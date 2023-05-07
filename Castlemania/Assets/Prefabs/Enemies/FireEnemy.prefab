@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8793129308771709544}
   - component: {fileID: 6811492234431776809}
   - component: {fileID: 7344636404037492186}
+  - component: {fileID: 4418624295901492941}
   - component: {fileID: 1353652604}
   - component: {fileID: 5411136778494572484}
   m_Layer: 6
@@ -79,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e8b80ddde2fbb4e90a4d2c01963be9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invulnerable: 0
 --- !u!114 &6056942711181143537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +165,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   handler: {fileID: 3970655304076129260}
+--- !u!114 &4418624295901492941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3970655304076129249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ce27037a1b45646b29d1689b3440c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathfinder: {fileID: 1011162554167663709}
+  container: player
 --- !u!95 &1353652604
 Animator:
   serializedVersion: 3

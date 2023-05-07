@@ -29,7 +29,7 @@ public class InputHandler : MonoBehaviour
         if (Clock.instance.canHit)
         {
             invokes.Invoke(moveType);
-        }else if (Clock.instance.canFail){
+        }else{
             invokes.Invoke(MoveType.fail);
         }
     }
