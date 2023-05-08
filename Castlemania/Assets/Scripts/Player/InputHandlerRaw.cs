@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class InputHandler : MonoBehaviour
+public class InputHandlerRaw : MonoBehaviour
 {
     public InputType inputType;
     public string eventName;
-    public MoveType moveType;
-    public UnityEvent<MoveType> invokes;
+    public UnityEvent invokes;
 
     public void Start()
     {
@@ -26,14 +25,6 @@ public class InputHandler : MonoBehaviour
 
     public void HandleInput(InputAction.CallbackContext context)
     {
-        if (!Clock.instance.active){
-            return;
-        }
-        if (Clock.instance.canHit)
-        {
-            invokes.Invoke(moveType);
-        }else{
-            invokes.Invoke(MoveType.fail);
-        }
+        invokes.Invoke();
     }
 }

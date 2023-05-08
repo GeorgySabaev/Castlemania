@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Clock : MonoBehaviour
 {
+    public AudioSource track;
     public float bpm;
 
     public float offset;
@@ -16,6 +17,7 @@ public class Clock : MonoBehaviour
     public UnityEvent BeatFires;
     public UnityEvent BeatResolves;
     public UnityEvent PostBeatResolves;
+    
 
     [Space(10)]
     public bool canHit;
@@ -33,7 +35,7 @@ public class Clock : MonoBehaviour
     public double preHitWindow;
     public double postHitWindow;
     public double gracePeriod;
-
+    public double pauseTime;
     public int state = 2;
 
     // beat - state 0 - end of window - state 1 - start of window - state 2 - beat
@@ -49,6 +51,17 @@ public class Clock : MonoBehaviour
     public void Activate(){
         targetTime = AudioSettings.dspTime+rate*offset;
         active = true;
+        track.Play();
+    }
+    public void Pause(){
+        pauseTime = AudioSettings.dspTime;
+        active = false;
+        track.Pause();
+    }
+    public void Resume(){
+        targetTime += AudioSettings.dspTime - pauseTime;
+        active = true;
+        track.UnPause();
     }
     void OnAudioFilterRead(float[] data, int channels)
     {
