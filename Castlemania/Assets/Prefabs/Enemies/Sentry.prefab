@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8392376950120964104}
   - component: {fileID: 8392376950120964111}
   - component: {fileID: 8392376950120964110}
+  - component: {fileID: 2996815673535107868}
   - component: {fileID: 8392376950120964109}
   m_Layer: 6
   m_Name: Sentry
@@ -74,6 +75,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerable: 0
+--- !u!114 &2996815673535107868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392376950120964108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e73cd82c15ec2349b949fc169bed2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  handler: {fileID: 8392376950120964110}
 --- !u!50 &8392376950120964109
 Rigidbody2D:
   serializedVersion: 4
