@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class A_CompoundAction : BaseAction
 {
-    UnityEvent actions = new UnityEvent();
+    public UnityEvent actions = new UnityEvent();
     override public void Invoke()
     {
         actions.Invoke();

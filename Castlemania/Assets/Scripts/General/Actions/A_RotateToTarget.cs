@@ -6,6 +6,7 @@ using System.Linq;
 public class A_RotateToTarget : BaseAction
 {
     public string target;
+    public Transform pivot;
 
     override public void Invoke()
     {
@@ -21,7 +22,7 @@ public class A_RotateToTarget : BaseAction
                 Vector3.SignedAngle(
                     Vector3.up,
                     (
-                        TransformOperations.GetClosest(transform, targetList).position
+                        TransformOperations.GetClosest(pivot, targetList).position
                         + new Vector3(0.5f, 0.5f, 0)
                     ) - transform.position,
                     Vector3.forward
