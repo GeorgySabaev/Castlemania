@@ -11,4 +11,5 @@ public enum MoveType
     moveRight,
     idle,
     fail,
+    releaseAttack,
 }

@@ -19,7 +19,8 @@ public class Clock : MonoBehaviour
 
     [Space(10)]
     public bool canHit;
-    public bool canFail = true;
+    public bool canFail;
+    public bool active;
 
     public static Clock instance;
 
@@ -44,10 +45,16 @@ public class Clock : MonoBehaviour
         preHitWindow = rate * preHitWindowPart;
         postHitWindow = rate * postHitWindowPart;
         gracePeriod = rate * gracePeriodPart;
+    }
+    public void Activate(){
         targetTime = AudioSettings.dspTime+rate*offset;
+        active = true;
     }
     void OnAudioFilterRead(float[] data, int channels)
     {
+        if(!active){
+            return;
+        }
         if (AudioSettings.dspTime >= targetTime)
         {
             switch (state)

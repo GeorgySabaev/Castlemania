@@ -9,7 +9,6 @@ public class KamikazeAttack : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(1);
         if (((1 << other.gameObject.layer) & layerMask) == 0)
         {
             return;

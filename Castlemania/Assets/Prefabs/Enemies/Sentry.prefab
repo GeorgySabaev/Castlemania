@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8392376950120964110}
   - component: {fileID: 2996815673535107868}
   - component: {fileID: 8392376950120964109}
+  - component: {fileID: 9066668590571397833}
   m_Layer: 6
   m_Name: Sentry
   m_TagString: Untagged
@@ -112,6 +113,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9066668590571397833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392376950120964108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c9762e139ec824788efdf4fcd534ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aim: {fileID: 8392376950302075813}
+  aimRepeats: 10
+  flash: {fileID: 8392376951278344089}
+  flashRepeats: 3
+  shoot: {fileID: 8392376951804019104}
+  shootRepeats: 1
+  counter: 0
+  state: 0
 --- !u!1 &8392376950197362299
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +293,6 @@ GameObject:
   - component: {fileID: 8392376950507255103}
   - component: {fileID: 8392376950507255097}
   - component: {fileID: 8392376950507255096}
-  - component: {fileID: 8392376950507255098}
   - component: {fileID: 8392376950507255099}
   m_Layer: 6
   m_Name: Head
@@ -327,7 +347,7 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8392376950507255098}
+      - m_Target: {fileID: 9066668590571397833}
         m_TargetAssemblyTypeName: SniperController, Assembly-CSharp
         m_MethodName: Invoke
         m_Mode: 1
@@ -339,26 +359,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8392376950507255098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8392376950507255102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c9762e139ec824788efdf4fcd534ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aim: {fileID: 8392376950302075813}
-  aimRepeats: 5
-  flash: {fileID: 8392376951278344089}
-  flashRepeats: 3
-  shoot: {fileID: 8392376951804019104}
-  shootRepeats: 1
-  counter: 0
-  state: 0
 --- !u!95 &8392376950507255099
 Animator:
   serializedVersion: 3

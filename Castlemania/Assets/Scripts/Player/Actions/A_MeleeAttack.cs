@@ -11,7 +11,7 @@ public class A_MeleeAttack : BaseAction
     {
         var collisions = Physics2D.OverlapBoxAll(
             trigger.bounds.center,
-            trigger.bounds.size / 2,
+            trigger.bounds.size,
             0f,
             layerMask
         );
