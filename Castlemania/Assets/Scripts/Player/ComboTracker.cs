@@ -63,12 +63,6 @@ public class ComboTracker : MonoBehaviour, ISerializationCallbackReceiver
             _actions[i].Moves.list.Reverse();
         }
     }
-    public void Start(){
-       Clock.instance.BeatResolves.AddListener(ResolveMove);
-    }
-    public void OnDestroy(){
-        Clock.instance.BeatResolves.RemoveListener(ResolveMove);
-    }
 
     public void MakeMove(MoveType type)
     {
@@ -102,5 +96,11 @@ public class ComboTracker : MonoBehaviour, ISerializationCallbackReceiver
             }
         }
         action?.Invoke();
+    }
+    void Start(){
+       Clock.instance.BeatResolves.AddListener(ResolveMove);
+    }
+    void OnDestroy(){
+        Clock.instance.BeatResolves.RemoveListener(ResolveMove);
     }
 }

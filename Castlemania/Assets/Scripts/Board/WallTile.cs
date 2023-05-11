@@ -89,21 +89,4 @@ public class WallTile : Tile
     {
         return tilemap.GetTile(position) is WallTile;
     }
-
-#if UNITY_EDITOR
-    [MenuItem("Assets/Create/WallTile")]
-    public static void CreateRoadTile()
-    {
-        string path = EditorUtility.SaveFilePanelInProject(
-            "Save Wall Tile",
-            "New wall Tile",
-            "Asset",
-            "Save Wall Tile",
-            "Assets"
-        );
-        if (path == "")
-            return;
-        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<WallTile>(), path);
-    }
-#endif
 }

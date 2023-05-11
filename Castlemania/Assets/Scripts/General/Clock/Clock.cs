@@ -17,7 +17,6 @@ public class Clock : MonoBehaviour
     public UnityEvent BeatFires;
     public UnityEvent BeatResolves;
     public UnityEvent PostBeatResolves;
-    
 
     [Space(10)]
     public bool canHit;
@@ -28,8 +27,6 @@ public class Clock : MonoBehaviour
 
     public double targetTime;
 
-    public int beatNumber;
-
     public double rate;
 
     public double preHitWindow;
@@ -38,34 +35,40 @@ public class Clock : MonoBehaviour
     public double pauseTime;
     public int state = 2;
 
-    // beat - state 0 - end of window - state 1 - start of window - state 2 - beat
     void Awake()
     {
         instance = this;
         rate = 60.0 / bpm;
-        beatNumber = 0;
         preHitWindow = rate * preHitWindowPart;
         postHitWindow = rate * postHitWindowPart;
         gracePeriod = rate * gracePeriodPart;
     }
-    public void Activate(){
-        targetTime = AudioSettings.dspTime+rate*offset;
+
+    public void Activate()
+    {
+        targetTime = AudioSettings.dspTime + rate * offset;
         active = true;
         track.Play();
     }
-    public void Pause(){
+
+    public void Pause()
+    {
         pauseTime = AudioSettings.dspTime;
         active = false;
         track.Pause();
     }
-    public void Resume(){
+
+    public void Resume()
+    {
         targetTime += AudioSettings.dspTime - pauseTime;
         active = true;
         track.UnPause();
     }
+
     void OnAudioFilterRead(float[] data, int channels)
     {
-        if(!active){
+        if (!active)
+        {
             return;
         }
         if (AudioSettings.dspTime >= targetTime)
@@ -95,7 +98,6 @@ public class Clock : MonoBehaviour
                     targetTime += postHitWindow;
                     state = 0;
                     return;
-                
             }
         }
     }

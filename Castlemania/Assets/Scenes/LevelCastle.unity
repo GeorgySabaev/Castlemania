@@ -305,13 +305,12 @@ MonoBehaviour:
   canFail: 1
   active: 0
   targetTime: 0
-  beatNumber: 0
   rate: 0
   preHitWindow: 0
   postHitWindow: 0
   gracePeriod: 0
   pauseTime: 0
-  state: 2
+  state: 3
 --- !u!4 &96698064
 Transform:
   m_ObjectHideFlags: 0
@@ -3633,9 +3632,11 @@ GameObject:
   m_Component:
   - component: {fileID: 951097424}
   - component: {fileID: 951097422}
+  - component: {fileID: 951097426}
   - component: {fileID: 951097421}
   - component: {fileID: 951097420}
   - component: {fileID: 951097423}
+  - component: {fileID: 951097425}
   m_Layer: 7
   m_Name: StompAttack
   m_TagString: Untagged
@@ -3726,6 +3727,35 @@ Transform:
   m_Father: {fileID: 1310883142}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951097425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951097419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6891de7f6d42c0a46ae6600b642992ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1870124752}
+  state: Stomp Attack
+--- !u!114 &951097426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951097419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39cb72150b1395459880384a9f13e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 951097420}
+  - {fileID: 951097425}
 --- !u!1 &959193010
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,8 +6053,8 @@ MonoBehaviour:
     Event:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 951097420}
-          m_TargetAssemblyTypeName: A_Stomp, Assembly-CSharp
+        - m_Target: {fileID: 951097426}
+          m_TargetAssemblyTypeName: A_OrderedAction, Assembly-CSharp
           m_MethodName: Invoke
           m_Mode: 1
           m_Arguments:
