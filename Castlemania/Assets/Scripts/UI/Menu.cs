@@ -14,6 +14,9 @@ public class Menu : MonoBehaviour
         currentMenu = menu;
     }
     public static void LeaveMenu(){
+        if(!inMenu){
+            return;
+        }
         menus[currentMenu].gameObject.SetActive(false);
         inMenu = false;
     }
