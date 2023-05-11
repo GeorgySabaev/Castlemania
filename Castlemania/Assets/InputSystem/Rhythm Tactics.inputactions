@@ -6,7 +6,7 @@
             "id": "8304e226-629f-4b21-b2fc-0780e4a8622d",
             "actions": [
                 {
-                    "name": "Attack",
+                    "name": "Attack_Knight",
                     "type": "Button",
                     "id": "15d419bc-4a7e-4afb-a4e3-54bf53314531",
                     "expectedControlType": "Button",
@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MoveLeft",
+                    "name": "MoveLeft_Knight",
                     "type": "Button",
                     "id": "ad08ec64-9af7-4437-92b2-ca2482be3315",
                     "expectedControlType": "Button",
@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MoveRight",
+                    "name": "MoveRight_Knight",
                     "type": "Button",
                     "id": "ebc1a66e-1ef9-4e2d-95b0-ddcaa2541afa",
                     "expectedControlType": "Button",
@@ -30,7 +30,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MoveUp",
+                    "name": "MoveUp_Knight",
                     "type": "Button",
                     "id": "2df5b578-8894-4b91-8018-fc81c3f276ad",
                     "expectedControlType": "Button",
@@ -38,9 +38,49 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MoveDown",
+                    "name": "MoveDown_Knight",
                     "type": "Button",
                     "id": "13677fa0-1d3f-4c03-807d-f7e3aa639809",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Attack_Guard",
+                    "type": "Button",
+                    "id": "5e2171aa-b874-4cdc-8ac5-852e21224d38",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveDown_Guard",
+                    "type": "Button",
+                    "id": "a474aee3-e3f8-48fb-af14-783578d45dfc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveUp_Guard",
+                    "type": "Button",
+                    "id": "641e50c6-30e7-44e6-ae5c-344d15bb99c5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveRight_Guard",
+                    "type": "Button",
+                    "id": "04677776-55f5-4115-925f-07b8e57566c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveLeft_Guard",
+                    "type": "Button",
+                    "id": "018015db-ddb4-436b-b69e-a6eb9f10b133",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -74,11 +114,11 @@
                 {
                     "name": "",
                     "id": "523149ff-36d8-4f13-a26b-c67324e0fa57",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Attack_Knight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -89,7 +129,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveLeft",
+                    "action": "MoveLeft_Knight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -100,7 +140,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveRight",
+                    "action": "MoveRight_Knight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -111,7 +151,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveUp",
+                    "action": "MoveUp_Knight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -122,7 +162,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveDown",
+                    "action": "MoveDown_Knight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -156,6 +196,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "170389cf-b7df-47b0-b225-c66d9e6b204b",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeft_Guard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1237d575-f4a5-49ae-b0c7-558ee5a6ae33",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRight_Guard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20e6cf70-f497-446b-806f-5b566a809b56",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveUp_Guard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9a8f63e-8158-4b04-a6b1-8b6db62f81b5",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDown_Guard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2be60d4a-4b9a-4626-b3cb-e43f26d6c9f5",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack_Guard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
