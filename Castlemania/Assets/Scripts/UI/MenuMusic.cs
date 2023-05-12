@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuMusic : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class MenuMusic : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoad;
     }
-    void OnSceneLoad(){
+    void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode){
         var objects = FindObjectsOfType<MenuMusicMarker>();
         if(objects.Length == 0){
             Destroy(this.gameObject);

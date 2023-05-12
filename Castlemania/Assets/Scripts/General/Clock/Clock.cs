@@ -14,6 +14,7 @@ public class Clock : MonoBehaviour
     public float postHitWindowPart;
     public float gracePeriodPart;
 
+    public UnityEvent BeatStarts;
     public UnityEvent BeatFires;
     public UnityEvent BeatResolves;
     public UnityEvent PostBeatResolves;
@@ -89,6 +90,7 @@ public class Clock : MonoBehaviour
                     state = 2;
                     return;
                 case 2: // hit window start
+                    Invoker.Invoke(BeatStarts);
                     canHit = true;
                     targetTime += preHitWindow;
                     state = 3;
