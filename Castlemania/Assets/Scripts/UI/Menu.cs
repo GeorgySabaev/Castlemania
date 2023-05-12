@@ -8,18 +8,27 @@ public class Menu : MonoBehaviour
     public static string currentMenu;
     public static bool inMenu;
     public string menuName;
-    public static void LoadMenu(string menu){
+
+    public static void LoadMenu(string menu)
+    {
         inMenu = true;
         menus[menu].gameObject.SetActive(true);
         currentMenu = menu;
     }
-    public static void LeaveMenu(){
-        if(!inMenu){
+
+    public static void LeaveMenu()
+    {
+        if (!inMenu)
+        {
             return;
         }
-        menus[currentMenu].gameObject.SetActive(false);
+        if (!menus.ContainsKey(currentMenu))
+        {
+            menus[currentMenu].gameObject.SetActive(false);
+        }
         inMenu = false;
     }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,10 +38,12 @@ public class Menu : MonoBehaviour
         }
         else
         {
+            menus[menuName] = this;
             Debug.LogError("Duplicate menus.");
         }
         gameObject.SetActive(false);
     }
+
     void OnDestroy()
     {
         menus.Remove(menuName);

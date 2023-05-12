@@ -7,9 +7,12 @@ public class Pause : MonoBehaviour
 {
     void Start()
     {
-        InputManager.instance.input.actions["Pause"].started += TogglePause;
+        InputManager.instance.input.actions["Pause"].started += TogglePauseHandler;
     }
-    public void TogglePause(InputAction.CallbackContext context){
+    public void TogglePauseHandler(InputAction.CallbackContext context){
+        TogglePause();
+    }
+    public void TogglePause(){
         if(DeathMenu.isActive){
             return;
         }
