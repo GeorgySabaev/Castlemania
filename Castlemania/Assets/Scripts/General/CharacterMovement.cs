@@ -14,33 +14,41 @@ public class CharacterMovement : MonoBehaviour
 
     public void MoveLeft()
     {
+        var direction = new Vector2(-1, 0);
+        SetFlipped(direction);
         if (graph.ConnectedLeft(graph.GetCoordinates(transform.position)))
         {
-            Move(new Vector2(-1, 0));
+            Move(direction);
         }
     }
 
     public void MoveRight()
     {
+        var direction = new Vector2(1, 0);
+        SetFlipped(direction);
         if (graph.ConnectedRight(graph.GetCoordinates(transform.position)))
         {
-            Move(new Vector2(1, 0));
+            Move(direction);
         }
     }
 
     public void MoveUp()
     {
+        var direction = new Vector2(0, 1);
+        SetFlipped(direction);
         if (graph.ConnectedUp(graph.GetCoordinates(transform.position)))
         {
-            Move(new Vector2(0, 1));
+            Move(direction);
         }
     }
 
     public void MoveDown()
     {
+        var direction = new Vector2(0, -1);
+        SetFlipped(direction);
         if (graph.ConnectedDown(graph.GetCoordinates(transform.position)))
         {
-            Move(new Vector2(0, -1));
+            Move(direction);
         }
     }
 
@@ -48,6 +56,10 @@ public class CharacterMovement : MonoBehaviour
     {
         transform.Translate(direction);
         transform.position = graph.tilemap.CellToWorld(graph.GetCoordinates(transform.position)); // snap to grid
+    }
+
+    private void SetFlipped(Vector2 direction)
+    {
         if (direction.x > 0)
         {
             anim?.SetBool("flipped", false);
