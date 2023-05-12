@@ -10,15 +10,17 @@ public class LevelManager : MonoBehaviour
 
     public void Awake()
     {
-        StartCoroutine(LoadingScene());
+        //StartCoroutine(LoadingScene());
     }
 
     public void Load(){
-        canLoad = true;
+        //canLoad = true;
+        SceneManager.LoadScene(sceneName);
     }
-
-    IEnumerator LoadingScene()
+    // old code for scene loading, more performant but cannot preload multiple scenes at once
+    /*IEnumerator LoadingScene()
     {
+        yield return null;
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
         asyncOperation.allowSceneActivation = false;
         while (!asyncOperation.isDone)
@@ -28,5 +30,5 @@ public class LevelManager : MonoBehaviour
                 asyncOperation.allowSceneActivation = true;
             }
         }
-    }
+    }*/
 }
