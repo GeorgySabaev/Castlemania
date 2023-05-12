@@ -936,6 +936,8 @@ GameObject:
   m_Component:
   - component: {fileID: 396429870}
   - component: {fileID: 396429869}
+  - component: {fileID: 396429872}
+  - component: {fileID: 396429871}
   m_Layer: 0
   m_Name: WinCondition
   m_TagString: Untagged
@@ -957,7 +959,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnWin:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 396429872}
+        m_TargetAssemblyTypeName: A_SetPlayerPrefInt, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 396429871}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &396429870
 Transform:
   m_ObjectHideFlags: 0
@@ -972,6 +998,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396429871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396429868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ed9b003de22c243ba5cd54c3aaf603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: WinMenu
+  canLoad: 0
+--- !u!114 &396429872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396429868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c37e5f5b89e314c83f1cf58bbdf7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Level
+  value: 2
 --- !u!1 &474319360
 GameObject:
   m_ObjectHideFlags: 0

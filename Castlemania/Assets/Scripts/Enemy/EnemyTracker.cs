@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyTracker : MonoBehaviour
 {
-    private static HashSet<EnemyTracker> enemies;
+    private static HashSet<EnemyTracker> enemies = new HashSet<EnemyTracker>();
     void Start()
     {
         enemies.Add(this);
