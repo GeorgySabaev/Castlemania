@@ -39,14 +39,14 @@ public class Clock : MonoBehaviour
     void Awake()
     {
         instance = this;
-        rate = 60.0 / bpm;
-        preHitWindow = rate * preHitWindowPart;
-        postHitWindow = rate * postHitWindowPart;
-        gracePeriod = rate * gracePeriodPart;
     }
 
     public void Activate()
     {
+        rate = 60.0 / bpm;
+        preHitWindow = rate * preHitWindowPart;
+        postHitWindow = rate * postHitWindowPart;
+        gracePeriod = rate * gracePeriodPart;
         targetTime = AudioSettings.dspTime + rate * offset;
         active = true;
         track.Play();

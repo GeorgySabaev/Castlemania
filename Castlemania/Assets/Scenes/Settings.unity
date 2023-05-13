@@ -284,6 +284,8 @@ GameObject:
   - component: {fileID: 310466132}
   - component: {fileID: 310466131}
   - component: {fileID: 310466130}
+  - component: {fileID: 310466133}
+  - component: {fileID: 310466134}
   m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
@@ -359,7 +361,19 @@ MonoBehaviour:
   m_NumberOfSteps: 3
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 310466133}
+        m_TargetAssemblyTypeName: BeatStrictnessSave, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &310466131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +412,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310466128}
   m_CullTransparentMesh: 1
+--- !u!114 &310466133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310466128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62e5277b8800da4980db18d72acbcfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollbar: {fileID: 310466130}
+--- !u!114 &310466134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310466128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300038294092a3a4799e229cb6d96f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 310466130}
+  saveData: Strictness
 --- !u!1 &417387528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769536176}
   - component: {fileID: 1769536177}
+  - component: {fileID: 1769536178}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -2424,8 +2466,32 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1769536178}
+        m_TargetAssemblyTypeName: ToggleFullscreen, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &1769536178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769536175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6119a457ae1fa4687763afc03ef102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1865536046
 GameObject:
   m_ObjectHideFlags: 0
