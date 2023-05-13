@@ -14,5 +14,6 @@ public class DeathMenu : MonoBehaviour
         }
         instance = this;
         gameObject.SetActive(false);
+        isActive = false;
     }
 }

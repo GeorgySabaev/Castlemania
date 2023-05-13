@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1466123421}
+  m_FirstSelected: {fileID: 1324318384}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &657386680
@@ -938,6 +938,7 @@ GameObject:
   - component: {fileID: 1466123424}
   - component: {fileID: 1466123423}
   - component: {fileID: 1466123426}
+  - component: {fileID: 1466123427}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -1008,7 +1009,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1466123424}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1466123427}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1466123424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1074,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1466123423}
   level: 2
+--- !u!114 &1466123427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466123421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ed9b003de22c243ba5cd54c3aaf603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level2
+  canLoad: 0
 --- !u!1001 &1550038450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,6 +1542,7 @@ GameObject:
   - component: {fileID: 2052886127}
   - component: {fileID: 2052886126}
   - component: {fileID: 2052886125}
+  - component: {fileID: 2052886129}
   - component: {fileID: 2052886128}
   m_Layer: 5
   m_Name: Level 3
@@ -1586,7 +1614,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2052886126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2052886129}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2052886126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,6 +1679,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 2052886125}
   level: 3
+--- !u!114 &2052886129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052886123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ed9b003de22c243ba5cd54c3aaf603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level3
+  canLoad: 0
 --- !u!1 &2110794009
 GameObject:
   m_ObjectHideFlags: 0

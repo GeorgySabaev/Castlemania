@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 6014916436795947457}
   - component: {fileID: 3421582795731074533}
   - component: {fileID: 4766319557118429592}
+  - component: {fileID: 8349265724446810637}
   m_Layer: 6
   m_Name: GuardianTotem
   m_TagString: Untagged
@@ -252,6 +253,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130adb8ae542e5f49b97f29fee651769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8349265724446810637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421582795731074532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e73cd82c15ec2349b949fc169bed2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  handler: {fileID: 3421582795731074537}
 --- !u!1 &3421582796036021756
 GameObject:
   m_ObjectHideFlags: 0
