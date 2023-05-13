@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyTracker : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class EnemyTracker : MonoBehaviour
     void OnDestroy()
     {
         enemies.Remove(this);
-        if (enemies.Count == 0){
+        if (enemies.Count == 0 && SceneManager.GetActiveScene().isLoaded){
             WinCondition.instance.OnWin.Invoke();
         }
     }

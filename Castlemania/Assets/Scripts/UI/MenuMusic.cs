@@ -21,7 +21,7 @@ public class MenuMusic : MonoBehaviour
     }
     void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode){
         var objects = FindObjectsOfType<MenuMusicMarker>();
-        if(objects.Length == 0){
+        if(objects.Length == 0 && this){
             Destroy(this.gameObject);
             return;
         }

@@ -27,4 +27,7 @@ public class InputHandlerRaw : MonoBehaviour
     {
         invokes.Invoke();
     }
+    void OnDestroy(){
+        invokes.RemoveAllListeners();
+    }
 }
